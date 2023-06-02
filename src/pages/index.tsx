@@ -72,6 +72,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main style={{backgroundImage:'url(/fundo.jpg)', backgroundPosition: 'center', backgroundSize: 'cover', height:"100vh",display: "flex", justifyContent:"center", alignItems:"center"}}>
+        <div style={{position:'fixed', top:'10px', left:'10px', display: 'flex', gap: '10px'}}>
+          <Image src={'/icon.svg'} alt='SameTune logo' width={50} height={50} />
+          <span style={{fontWeight:'bolder', fontSize:'30px', color:'white', margin: 'auto 0'}}>SAMETUNE</span>
+        </div>
         {layoutIrPraPlaylist?
           <Card style={{width: '70%', maxHeight: '80vh', padding: '15px'}}>
             <Card.Title>Hub 1234</Card.Title>
