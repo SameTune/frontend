@@ -16,6 +16,7 @@ export default function Home() {
   const [layoutIrPraPlaylist, setLayoutIrPRaPaylist] = useState(false);
   const [host, setHost] = useState(false)
   const [url, setUrl] = useState('')
+  const [spotfyConectado, setSpotfyConectado] = useState(false)
 
   const [playlist, setPlaylist] = useState([
     {
@@ -101,7 +102,7 @@ export default function Home() {
                     <BsFillSkipEndCircleFill size={'2em'} color='#0d6efd'/>
                   </div>
                   <div style={{display:'flex', justifyContent:'center', marginTop:'5px'}}>
-                    <Button variant='outline-success' size='sm'>Conectar no <BsSpotify />?</Button>
+                    {spotfyConectado?<></>:<Button variant='outline-success' size='sm' onClick={()=>setSpotfyConectado(true)}>Conectar no <BsSpotify />?</Button>}
                   </div>
                 </>
               :
