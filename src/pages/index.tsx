@@ -19,127 +19,39 @@ export default function Home() {
 
   const [playlist, setPlaylist] = useState([
     {
-      url: "www.pudim.com.br",
-      service: "Spotify",
-      title: "Titulo 1",
-      author: "IEU"
+      url: "https://www.youtube.com/watch?v=ItKz7xfDDtY",
+      service: "Youtube",
+      title: "Tears Of Fire (KEEL 1986)",
+      author: "Ron Keel"
     },
     {
-      url: "www.pudim.com.br",
-      service: "YouTube",
-      title: "Titulo 2",
-      author: "EU MSM"
+      url: "https://www.youtube.com/watch?v=C6uqTWHzHvo",
+      service: "Youtube",
+      title: "Like a Stone",
+      author: "Audioslave"
     },
     {
-      url: "www.pudim.com.br",
-      service: "Spotify",
-      title: "Titulo 1",
-      author: "IEU"
+      url: "https://www.youtube.com/watch?v=tuw1ziytBDk",
+      service: "Youtube",
+      title: "Schism",
+      author: "TOOL"
     },
     {
-      url: "www.pudim.com.br",
-      service: "YouTube",
-      title: "Titulo 2",
-      author: "EU MSM"
+      url: "https://www.youtube.com/watch?v=uDtgnYZsw7A",
+      service: "Youtube",
+      title: "Holy Diver",
+      author: "Dio - Tema"
     },{
-      url: "www.pudim.com.br",
-      service: "Spotify",
-      title: "Titulo 1",
-      author: "IEU"
+      url: "https://www.youtube.com/watch?v=jgbf03MJyS4",
+      service: "Youtube",
+      title: "Burn (Remastered 2004)",
+      author: "Deep Purple Official"
     },
     {
-      url: "www.pudim.com.br",
-      service: "YouTube",
-      title: "Titulo 2",
-      author: "EU MSM"
-    },{
-      url: "www.pudim.com.br",
-      service: "Spotify",
-      title: "Titulo 1",
-      author: "IEU"
-    },
-    {
-      url: "www.pudim.com.br",
-      service: "YouTube",
-      title: "Titulo 2",
-      author: "EU MSM"
-    },{
-      url: "www.pudim.com.br",
-      service: "Spotify",
-      title: "Titulo 1",
-      author: "IEU"
-    },
-    {
-      url: "www.pudim.com.br",
-      service: "YouTube",
-      title: "Titulo 2",
-      author: "EU MSM"
-    },{
-      url: "www.pudim.com.br",
-      service: "Spotify",
-      title: "Titulo 1",
-      author: "IEU"
-    },
-    {
-      url: "www.pudim.com.br",
-      service: "YouTube",
-      title: "Titulo 2",
-      author: "EU MSM"
-    },{
-      url: "www.pudim.com.br",
-      service: "Spotify",
-      title: "Titulo 1",
-      author: "IEU"
-    },
-    {
-      url: "www.pudim.com.br",
-      service: "YouTube",
-      title: "Titulo 2",
-      author: "EU MSM"
-    },{
-      url: "www.pudim.com.br",
-      service: "Spotify",
-      title: "Titulo 1",
-      author: "IEU"
-    },
-    {
-      url: "www.pudim.com.br",
-      service: "YouTube",
-      title: "Titulo 2",
-      author: "EU MSM"
-    },{
-      url: "www.pudim.com.br",
-      service: "Spotify",
-      title: "Titulo 1",
-      author: "IEU"
-    },
-    {
-      url: "www.pudim.com.br",
-      service: "YouTube",
-      title: "Titulo 2",
-      author: "EU MSM"
-    },{
-      url: "www.pudim.com.br",
-      service: "Spotify",
-      title: "Titulo 1",
-      author: "IEU"
-    },
-    {
-      url: "www.pudim.com.br",
-      service: "YouTube",
-      title: "Titulo 2",
-      author: "EU MSM"
-    },{
-      url: "www.pudim.com.br",
-      service: "Spotify",
-      title: "Titulo 1",
-      author: "IEU"
-    },
-    {
-      url: "www.pudim.com.br",
-      service: "YouTube",
-      title: "Titulo 2",
-      author: "EU MSM"
+      url: "https://www.youtube.com/watch?v=V4BUn1YYWJE",
+      service: "Youtube",
+      title: "Pendragon - If i Were the Wind (and you were the rain)",
+      author: "Gianfranco Panico"
     },
   ]);
 
@@ -148,15 +60,6 @@ export default function Home() {
     if(playlistCode == '')
       setHost(true)
   }
-
-  /*
-  
-url
-Nome/titulo (YT: items[0].snippet.title  |  SF: )
-autor/canal (YT: items[0].snippet.channelTitle  |  SF: )
-servico
-
-  */
 
   return (
     <>
@@ -196,9 +99,6 @@ servico
                     <BsFillSkipStartCircleFill size={'2em'} color='#0d6efd'/>
                     <BsFillPlayCircleFill size={'2.5em'} color='#0d6efd'/>
                     <BsFillSkipEndCircleFill size={'2em'} color='#0d6efd'/>
-
-                  {/* <Button variant='outline-success' size='sm' style={{self}}><BsSpotify />?</Button> */}
-
                   </div>
                   <div style={{display:'flex', justifyContent:'center', marginTop:'5px'}}>
                     <Button variant='outline-success' size='sm'>Conectar no <BsSpotify />?</Button>
