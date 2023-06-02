@@ -6,7 +6,7 @@ import styles from '@/styles/Home.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-import { Card, Form, Button, ListGroup } from 'react-bootstrap';
+import { Card, Form, Button, ListGroup, Modal } from 'react-bootstrap';
 import { BsFillPlayCircleFill, BsFillSkipEndCircleFill, BsFillSkipStartCircleFill, BsSpotify } from 'react-icons/bs'
 
 
@@ -17,6 +17,7 @@ export default function Home() {
   const [host, setHost] = useState(false)
   const [url, setUrl] = useState('')
   const [spotfyConectado, setSpotfyConectado] = useState(false)
+  const [mostrarModal, setMostrarModal] = useState(false)
 
   const [playlist, setPlaylist] = useState([
     {
@@ -102,7 +103,7 @@ export default function Home() {
                     <BsFillSkipEndCircleFill size={'2em'} color='#0d6efd'/>
                   </div>
                   <div style={{display:'flex', justifyContent:'center', marginTop:'5px'}}>
-                    {spotfyConectado?<></>:<Button variant='outline-success' size='sm' onClick={()=>setSpotfyConectado(true)}>Conectar no <BsSpotify />?</Button>}
+                    {spotfyConectado?<></>:<Button variant='outline-success' size='sm' onClick={()=>setMostrarModal(true)}>Conectar no <BsSpotify />?</Button>}
                   </div>
                 </>
               :
@@ -119,6 +120,23 @@ export default function Home() {
             </Card.Body>
           </Card>
         }
+
+        <Modal show={mostrarModal} onHide={() => {setSpotfyConectado(false);setMostrarModal(false)}}>
+          <Modal.Header closeButton>
+            <Modal.Title><BsSpotify /> Escolha o dispositivo</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form.Select aria-label="Selecione o dispositivo">
+              <option>Selecione o dispositivo</option>
+              <option value="1">A52 do Thomas</option>
+              <option value="2">Firefox</option>
+              <option value="3">Rapido a resposta é</option>
+            </Form.Select>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" onClick={()=>{setSpotfyConectado(true); setMostrarModal(false)}}>Selecionar dispositivo</Button>
+          </Modal.Footer>
+        </Modal>
       </main>
     </>
   )
