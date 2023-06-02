@@ -7,12 +7,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import { Card, Form, Button, ListGroup } from 'react-bootstrap';
+import { BsFillPlayCircleFill, BsFillSkipEndCircleFill, BsFillSkipStartCircleFill, BsSpotify } from 'react-icons/bs'
 
 
 export default function Home() {
 
   const [playlistCode, setPlaylistCode] = useState('');
   const [layoutIrPraPlaylist, setLayoutIrPRaPaylist] = useState(false);
+  const [host, setHost] = useState(false)
   const [url, setUrl] = useState('')
 
   const [playlist, setPlaylist] = useState([
@@ -143,6 +145,8 @@ export default function Home() {
 
   const acessarHub = function(){
     setLayoutIrPRaPaylist(true);
+    if(playlistCode == '')
+      setHost(true)
   }
 
   /*
@@ -184,9 +188,25 @@ servico
               </ListGroup.Item>
               ))}
             </ListGroup>
-
             <div>
-              
+            {
+              host?
+                <>
+                  <div style={{display:'flex', justifyContent:'center', marginTop: '15px', alignItems: 'center', gap:'5px'}}>
+                    <BsFillSkipStartCircleFill size={'2em'} color='#0d6efd'/>
+                    <BsFillPlayCircleFill size={'2.5em'} color='#0d6efd'/>
+                    <BsFillSkipEndCircleFill size={'2em'} color='#0d6efd'/>
+
+                  {/* <Button variant='outline-success' size='sm' style={{self}}><BsSpotify />?</Button> */}
+
+                  </div>
+                  <div style={{display:'flex', justifyContent:'center', marginTop:'5px'}}>
+                    <Button variant='outline-success' size='sm'>Conectar no <BsSpotify />?</Button>
+                  </div>
+                </>
+              :
+                <></>
+            } 
             </div>
           </Card>
         :
