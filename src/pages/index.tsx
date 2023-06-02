@@ -114,7 +114,7 @@ export default function Home() {
             <Card.Body>
               <Card.Title>SameTune</Card.Title>
               <Form.Control type='text' id='playlistCode' placeholder='Insira o código de hub :D' value={playlistCode} onChange={e=>setPlaylistCode(e.target.value)} />
-              <Button onClick={acessarHub}>{playlistCode? "acessar Hub" :  "Ou crie um novo hub"}</Button>
+              <Button onClick={acessarHub} style={{width:'100%', marginTop:'5px'}}>{playlistCode? "acessar Hub" :  "Ou crie um novo hub"}</Button>
             </Card.Body>
           </Card>
         }
